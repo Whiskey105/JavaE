@@ -21,11 +21,11 @@ public class Person {
         this.sex = sex;
     }
 
-
+    //TODO конструктор из строки, сроку валидировать до отправки (не проверять внутри консруктора)
 
     public String getLastName() {
         return lastName;
     }
 
-
+    //TODO геттеры и сеттеры для полей
 }

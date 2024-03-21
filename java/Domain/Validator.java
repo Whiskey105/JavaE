@@ -4,7 +4,8 @@ import java.text.ParseException;
 
 public class Validator {
 
-    public boolean validateStringSize(String line) throws Exception {
+    //TODO Переписать методы по кастомные исключения
+    public static boolean validateStringSize(String line) throws Exception {
         String[] parsedLine = line.split(" ");
         int fieldsCount = 6;
 
@@ -18,11 +19,34 @@ public class Validator {
 
     }
 
-    public boolean validateNumber(String number) throws Exception {
+
+    //TODO Продумать форматирование первого символа (нужна ли проверка и удаление или сразу выводить исключение)
+    public static boolean validateNumber(String number) throws Exception {
         try {
             int num = Integer.parseInt(number);
-        } catch (Exception e){
-            System.out.println(e.getMessage());
+            return true;
+        } catch (NumberFormatException e){
+            System.out.println(e);
+            return false;
         }
     }
+
+    public static boolean validateChar (String sex) throws Exception {
+        if(sex.length() > 1 || sex != "m" && sex != "f")
+        {
+            throw new Exception("Пол указан неверно!");
+        }
+
+        return true;
+    }
+
+    public static boolean validateDate (String date) throws  Exception {
+
+        return false;
+    }
+
+
+
+
+
 }
