@@ -9,7 +9,6 @@ import java.util.Locale;
 
 public class Validator {
 
-    //TODO Переписать методы по кастомные исключения
     public static boolean validateStringSize(String line) throws Exception {
         String[] parsedLine = line.split(" ");
         int fieldsCount = 6;
@@ -29,7 +28,6 @@ public class Validator {
     }
 
 
-    //TODO Продумать форматирование первого символа (нужна ли проверка и удаление или сразу выводить исключение)
     public static boolean validateNumber(String number) throws Exception {
         try {
             Long.parseLong(number);

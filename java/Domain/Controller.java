@@ -15,6 +15,7 @@ public class Controller {
         boolean isRun = true;
         String switchCommand;
         Scanner scanner = new Scanner(System.in);
+        printCommands();
         while(isRun){
             System.out.println("Input command:");
             switchCommand = scanner.nextLine().toLowerCase(Locale.ROOT);
@@ -30,6 +31,7 @@ public class Controller {
                     break;
                 default :
                     System.out.println("Wrong command");
+                    printCommands();
                     break;
             }
 
@@ -72,7 +74,7 @@ public class Controller {
             if (file.length() > 0){
                 fileWriter.write('\n');
             }
-            fileWriter.write(String.format("%s %s %s %s %s %s", sourceArray[0], sourceArray[1], sourceArray[2], date, sourceArray[4], sourceArray[5]));
+            fileWriter.write(String.format("%s %s %s %s %s %s", sourceArray[0], sourceArray[1], sourceArray[2], formater.format(date), sourceArray[4], sourceArray[5]));
         }catch (IOException e){
             throw new FileSystemException("Возникла ошибка при работе с файлом");
         }
