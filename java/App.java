@@ -1,3 +1,4 @@
+import Domain.Controller;
 import Domain.Person;
 import Domain.Validator;
 
@@ -6,7 +7,8 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         //TODO проверить работу представления
-        String test = "Петров Сергей Алексаднрович 01.02.2002 79234123342/f";
+        /*
+        String test = "Петров Сергей Алексаднрович 01.02.2002 79234123342 f";
 
         Validator.validateStringSize(test);
 
@@ -19,7 +21,8 @@ public class App {
         Validator.validateChar(arrTest[5]);
 
         System.out.println(testB);
-
+        */
+        Controller.run();
     }
 
 
