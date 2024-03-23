@@ -75,6 +75,7 @@ public class Controller {
                 fileWriter.write('\n');
             }
             fileWriter.write(String.format("%s %s %s %s %s %s", sourceArray[0], sourceArray[1], sourceArray[2], formater.format(date), sourceArray[4], sourceArray[5]));
+            fileWriter.close();
         }catch (IOException e){
             throw new FileSystemException("Возникла ошибка при работе с файлом");
         }
