@@ -12,7 +12,7 @@ public class Person {
     private long telephoneNumber;
     private char sex;
 
-    public Person(String firstName, String midName, String lastName, Date birthDate, long telephoneNumber, char sex) {
+    public Person(String lastName, String midName, String firstName, Date birthDate, long telephoneNumber, char sex) {
         this.firstName = firstName;
         this.midName = midName;
         this.lastName = lastName;
@@ -21,7 +21,7 @@ public class Person {
         this.sex = sex;
     }
 
-    //TODO конструктор из строки, сроку валидировать до отправки (не проверять внутри консруктора)
+
 
     public String getLastName() {
         return lastName;
@@ -48,5 +48,10 @@ public class Person {
 
     public void setSex(char sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + firstName + midName + lastName + birthDate + telephoneNumber + sex + '}';
     }
 }

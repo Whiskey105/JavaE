@@ -1,5 +1,8 @@
 package Domain;
 
+import Exceptions.InvalidArrayLengthException;
+import Exceptions.InvalidFormatException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -55,7 +58,7 @@ public class Validator {
     }
 
     public static boolean validateDate (String date) throws  Exception {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.YYYY", Locale.ENGLISH);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy", Locale.ENGLISH);
         try {
             formatter.parse(date);
         } catch (ParseException e) {
