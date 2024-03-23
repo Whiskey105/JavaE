@@ -9,10 +9,10 @@ public class Person {
     private String midName;
     private String lastName;
     private Date birthDate;
-    private int telephoneNumber;
+    private long telephoneNumber;
     private char sex;
 
-    public Person(String firstName, String midName, String lastName, Date birthDate, int telephoneNumber, char sex) {
+    public Person(String firstName, String midName, String lastName, Date birthDate, long telephoneNumber, char sex) {
         this.firstName = firstName;
         this.midName = midName;
         this.lastName = lastName;
@@ -28,4 +28,25 @@ public class Person {
     }
 
     //TODO геттеры и сеттеры для полей
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMidName(String midName) {
+        this.midName = midName;
+    }
+
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setTelephoneNumber(long telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
 }
